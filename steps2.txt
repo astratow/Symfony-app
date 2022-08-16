@@ -1,0 +1,4 @@
+composer req make
+composer req twig
+composer req doctrine/annotations //needed for making controller
+symfony make:controller
