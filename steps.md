@@ -17,4 +17,11 @@ composer req make
 composer req doctrine
 composer require symfony/flex
 composer require logger
-php bin/console make:controller
+symfony console make:controller             php bin/console make:controller
+composer req annotations
+"laminas/laminas-code":"~4.5.0@dev", <= composer.json
+composer install
+symfony console doctrine:database:create
+symfony console doctrine:schema:update --dump-sql
+symfony console doctrine:schema:update --dump-sql
+symfony console make:controller ArticleController
