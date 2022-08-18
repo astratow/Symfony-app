@@ -1,4 +1,33 @@
 composer req make
 composer req twig
 composer req doctrine/annotations //needed for making controller
+composer req asset
+composer req doctrine
 symfony make:controller
+php -S localhost:8080 -t public/
+symfony server:ca:install // ssl cerificate
+composer require symfony/debug-bundle --dev\
+copy bootstrap cdn and paste into base.html.twig
+copy and paste bootstrap navbar template between <body> and {%body%} in base.html.twig
+
+
+>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+<a class="navbar-brand" href="#">Navbar</a> 
+>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//////////////////////////////////////////////////////////
+<a class="navbar-brand" href="{{ path('home')}}">Menu</a>
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+colorlib
+
+change links to pictures, css and javascript to asset format
+
+add block body section
+
+############################
+####### DATABASE ###########
+############################
+Change .env file.
+DATABASE_URL="mysql://artur:H0me-alone@127.0.0.1:3306/menu?serverVersion=8&charset=utf8"
+
+php bin/console doctrine:database:cerificate
