@@ -1,9 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Dish{% endblock %}
+{% block title %}Show Dish{% endblock %}
 
 {% block body %}
-    <h2>Edit Dish</h2>
+<div class="container">
+    <h2>Show Dish</h2>
     <br>
     <table class="table table-stripped">
         <thead>
@@ -16,11 +17,12 @@
         <tbody>
         {% for dish in dishes%}
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{dish.id}}</td>
+                <td>{{dish.name}}</td>
+                <td>{{dish.description}}</td>
             </tr>
             {%endfor%}
         </tbody>
     </table>
+</div>
 {% endblock %}
