@@ -27,7 +27,7 @@ class DishController extends AbstractController
         $dish = new Dish();
         // set name property for Dish object
         $dish->setName('Pizza');
-
+        $dish->setDescription('Italian dish, dough base with meat/veges/cheese/seafood on top');
         // Entity Manager
         // $entityManager = doctrine->getManager();
         $entityManager = $doctrine->getManager();
