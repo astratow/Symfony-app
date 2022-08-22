@@ -10,6 +10,8 @@ composer require symfony/debug-bundle --dev\
 copy bootstrap cdn and paste into base.html.twig
 copy and paste bootstrap navbar template between <body> and {%body%} in base.html.twig
 
+symfony proxy:domain:attach menu
+symfony proxy:start
 
 >>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 <a class="navbar-brand" href="#">Navbar</a> 
@@ -33,3 +35,7 @@ DATABASE_URL="mysql://artur:H0me-alone@127.0.0.1:3306/menu?serverVersion=8&chars
 php bin/console doctrine:database:cerificate
 php bin/console make:migration
 php bin/console doctrine:migrations:migrate
+
+Create Dishes
+
+php bin/console make:controller DishController
