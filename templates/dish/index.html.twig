@@ -4,4 +4,23 @@
 
 {% block body %}
     <h2>Edit Dish</h2>
+    <br>
+    <table class="table table-stripped">
+        <thead>
+         <tr>
+            <td>Order No</td>
+            <td>Name</td>
+            <td>Description</td>
+         </tr>
+        </thead>
+        <tbody>
+        {% for dish in dishes%}
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
 {% endblock %}
