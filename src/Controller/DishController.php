@@ -16,9 +16,9 @@ class DishController extends AbstractController
     #[Route('/', name: 'edit')]
     public function index(DishRepository $dishRepository): Response
     {
-        $dishEdit = $dishRepository->findAll();
+        $dishes = $dishRepository->findAll();
         return $this->render('dish/index.html.twig', [
-            'dishEdit' => $dishEdit
+            'dishes' => $dishes
         ]);
     }
     //  new function and routing
