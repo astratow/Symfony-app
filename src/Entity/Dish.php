@@ -19,6 +19,9 @@ class Dish
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $Description = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?float $Price = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -44,6 +47,18 @@ class Dish
     public function setDescription(?string $Description): self
     {
         $this->Description = $Description;
+
+        return $this;
+    }
+
+    public function getPrice(): ?float
+    {
+        return $this->Price;
+    }
+
+    public function setPrice(?float $Price): self
+    {
+        $this->Price = $Price;
 
         return $this;
     }
