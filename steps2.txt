@@ -44,3 +44,4 @@ symfony console make:entity
 edit Dish entity and add price column
 php bin/console doctrine:schema:update --force
 //updates database 
+composer req form

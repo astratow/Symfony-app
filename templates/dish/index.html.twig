@@ -3,6 +3,12 @@
 {% block title %}Show Dish{% endblock %}
 
 {% block body %}
+
+{% for message in app.flashes('success')%}
+    <div class="alert alert-success">
+        <h3>{{ message}}</h3>
+    </div>
+{% endfor %}
 <div class="container">
     <h2>Show Dish</h2>
     <br>
@@ -12,6 +18,9 @@
             <td>Order No</td>
             <td>Name</td>
             <td>Description</td>
+            <td>Price</td>
+            <td>Delete</td>
+            <td><a href="{{ path ('dish.create')}}">Add New Dish</a></td>
          </tr>
         </thead>
         <tbody>
@@ -20,8 +29,11 @@
                 <td>{{dish.id}}</td>
                 <td>{{dish.name}}</td>
                 <td>{{dish.description}}</td>
+                <td><a href="{{ path ('dish.delete', {id: dish.id} ) }}">Delete Dish</a></td>
+                <td></td>
+                <td></td>
             </tr>
-            {%endfor%}
+        {%endfor%}
         </tbody>
     </table>
 </div>
